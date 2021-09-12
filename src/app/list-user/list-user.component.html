@@ -2,8 +2,8 @@
 <div class="h-100 w-100">
     <div class="container h-100">
         <div class="col-12 col-md-6 m-auto d-flex flex-column h-100">
-            <div class="text-center border-bottom">
-                List of users
+            <div class="text-center border-bottom py-3 bg-white">
+                <h3 class="slim-font-style m-0">List of users</h3>
             </div>
             <div class="flex-grow-1 overflow-auto" *ngIf="!isLoading">
                 <div *ngFor="let user of users; let i = index" class="my-2">
