@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListUserService } from './list-user/list-user.service';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     HttpClientModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule
   ],
   providers: [ ListUserService ],
   bootstrap: [AppComponent]

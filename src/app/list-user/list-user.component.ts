@@ -9,13 +9,24 @@ import { ListUserService } from './list-user.service';
 export class ListUserComponent implements OnInit {
 
   users: any[] = [];
-
+  isLoading = false;
+  
   constructor(public listUserService: ListUserService) { }
 
   ngOnInit(): void {
-    this.listUserService.getUsers().subscribe( (res: any) => {
+    this.getUserData(0, 10);
+  }
+
+  getUserData(currentPage: number, limit: number) {
+    this.isLoading = true;
+    this.listUserService.getUsers(currentPage, limit).subscribe( (res: any) => {
+      this.isLoading = false;
       this.users = res.data;
     });
+  }
+
+  onPageChange(event: any) {
+    this.getUserData(event.pageIndex, event.pageSize);
   }
 
 }

@@ -9,10 +9,10 @@ export class ListUserService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers() {
+  getUsers(currentPage: number, limit: number) {
     let appId = environment.appId;
     let headers1 = new HttpHeaders({ 'app-id': appId })
-    return this.http.get('https://dummyapi.io/data/v1/user?limit=10', { headers: headers1});
+    return this.http.get(`https://dummyapi.io/data/v1/user?limit=${limit}&page=${currentPage}`, { headers: headers1});
   }
 
 }
