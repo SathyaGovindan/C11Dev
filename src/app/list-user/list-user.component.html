@@ -7,12 +7,12 @@
             </div>
             <div class="flex-grow-1 overflow-auto" *ngIf="!isLoading">
                 <div *ngFor="let user of users; let i = index" class="my-2">
-                    <mat-card>
+                    <mat-card class="cursor-pointer" [routerLink]="['/user',user.id]">
                         <!-- {{ user | json }} -->
                         <div class="d-flex">
                             <div><img width="72" height="72" [src]="user.picture"></div>
                             <div class=" align-items-center d-flex flex-grow-1 justify-content-center text-center">
-                                <h1 class="m-0 font-style">{{ user.firstName }} {{ user.lastName }}</h1>
+                                <h1 class="m-0 slim-font-style">{{ user.firstName }} {{ user.lastName }}</h1>
                             </div>
                         </div>
                     </mat-card>                

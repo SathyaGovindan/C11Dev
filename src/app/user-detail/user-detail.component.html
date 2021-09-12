@@ -1,0 +1,48 @@
+
+<div class="h-100 w-100">
+    <div class="container h-100">
+        <div class="col-12 col-md-6 h-100 m-auto">
+            <div *ngIf="!isLoading" class="w-100 h-100 d-flex flex-column align-items-center justify-content-center p-3">
+                <mat-card class="m-3 w-100 h-100">
+                    <div class="h-100 w-100 overflow-auto">
+                        <div class="text-center pb-3">
+                            User ID: {{user.id}}
+                        </div>
+                        <div class=" d-flex w-100 h-100 flex-column ">
+                            <div class="d-flex">
+                                <img [src]="user.picture">
+                                <div class="ps-3 flex-grow-1 d-flex flex-column justify-content-center">
+                                    <div> <strong>FirstName: </strong> {{user.firstName}}</div>
+                                    <div> <strong>LastName: </strong> {{user.lastName}}</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <h2 class="mb-1 slim-font-style ">Info</h2>
+                                <div><strong>Gender:</strong> {{user.gender}}</div>
+                                <div><strong>Date of birth:</strong> {{user.dateOfBirth | date}}</div>
+                                <div><strong>Register date:</strong> {{user.registerDate | date}}</div>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <h2 class="mb-1 slim-font-style ">Contact</h2>
+                                <div><strong>Email: </strong> sara.andersen@example.com</div>
+                                <div><strong>Phone: </strong> 92694011</div>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <h2 class="mb-1 slim-font-style ">Address</h2>
+                                <div><strong>State: </strong> Nordjylland</div>
+                                <div><strong>Street: </strong> 9614, SÃ¸ndermarksvej</div>
+                                <div><strong>City: </strong> Kongsvinger</div>
+                                <div><strong>Country: </strong> Denmark</div>
+                                <div><strong>Timezone: </strong> -9:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </mat-card>
+            </div>
+            <div *ngIf="isLoading" class="w-100 h-100 d-flex flex-column align-items-center justify-content-center">
+                <mat-spinner></mat-spinner>
+            </div>
+        </div>
+    </div>
+</div>
