@@ -1,0 +1,19 @@
+
+<div class="h-100 w-100">
+    <div class="container">
+        <div class="col-12 col-md-6 m-auto">
+            <div *ngFor="let user of users" class="my-2">
+                <mat-card>
+                    <!-- {{ user | json }} -->
+                    <div class="d-flex">
+                        <div><img width="72" height="72" [src]="user.picture"></div>
+                        <div class=" align-items-center d-flex flex-grow-1 justify-content-center text-center">
+                            <h1 class="m-0 font-style">{{ user.firstName }} {{ user.lastName }}</h1>
+                        </div>
+                    </div>
+                </mat-card>                
+            </div>
+        </div>
+    </div>
+    
+</div>
