@@ -8,5 +8,11 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
+.slim-font-style {
+  font-weight: 200 !important;
+}
 
 /*# sourceMappingURL=styles.css.map*/
